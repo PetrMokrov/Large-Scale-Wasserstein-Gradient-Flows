@@ -1,6 +1,6 @@
 # Large-Scale Wasserstein Gradient Flows
 
-This repository contains **code** for reproducing the experiments as well as **results** of the experiments related to our article  *[Large-Scale Wasserstein Gradient Flows](https://arxiv.org/abs/2106.00736)* accepted for NeurIPS 2021. In our work we approximate gradient flows and, in particular, diffusion processes governed by Fokker-Planck equation using so-called JKO scheme modelled via Input Convex Neural Networks. We propose four experiments which demonstrate that our approach capable to work in different scenarious and machine learning applications.
+This repository contains **code** and **results** of the experiments of NeurIPS 2021 paper *[Large-Scale Wasserstein Gradient Flows](https://arxiv.org/abs/2106.00736)* by [Petr Mokrov](https://www.semanticscholar.org/author/Petr-Mokrov/2106626550), [Alexander Korotin](https://scholar.google.ru/citations?user=1rIIvjAAAAAJ&hl=en), [Lingxiao Li](https://scholar.google.com/citations?user=rxQDLWcAAAAJ&hl=en), [Aude Genevay](https://scholar.google.com/citations?user=SryRaIMAAAAJ), [Justin Solomon](https://scholar.google.com/citations?user=pImSVwoAAAAJ) and [Evgeny Burnaev](https://scholar.google.ru/citations?user=pCRdcOwAAAAJ&hl=ru). We approximate gradient flows and, in particular, diffusion processes governed by Fokker-Planck equation using JKO scheme modelled via Input Convex Neural Networks. We conduct experiments to demonstrate that our approach works in different scenarios and machine learning applications.
 
 ## Citation
 
@@ -24,6 +24,9 @@ It is highly recommended to use GPU to launch our experiments. The list of requi
 ```bash
 > pip install -r requirements.txt
 ```
+
+## Related repositories
+- [Repository](https://github.com/iamalexkorotin/Wasserstein2GenerativeNetworks) for [Wasserstein-2 Generative Networks](https://openreview.net/pdf?id=bEoxzW_EXsa) paper.
 
 ## Experiments
 
@@ -53,7 +56,7 @@ In particular, the command below launches quantitative comparison experiment for
 
 The results for all dimensions are presented in the image below:
 
-<img src="./images/convergence_comparison.png" alt="drawing" width="400"/>
+<p align="center"><img src="./images/convergence_comparison.png" alt="drawing" width="450"/></p>
 
 #### Qualitative comparison
 
@@ -65,7 +68,7 @@ The qualitative comparion results could be reprodused via the following command:
 
 The `dimensionality` can be either *D = 13* or *D = 32*. The comparison between fitted and true stationary distribution for *D = 32* below:
 
-<img src="./images/convergence_mix_gauss_32.png" alt="drawing" width="400"/>
+<p align="center"><img src="./images/convergence_mix_gauss_32.png" alt="drawing" width="450"/></p>
 
 ### Modelling Ornstein-Uhlenbeck processes
 
@@ -80,7 +83,7 @@ The available options for `method` are `ICNN_jko`, `EM_sim_1000`, `EM_sim_10000`
 
 The obtained divergence between true and fitted distributions for *t = 0.9* sec.:
 
-<img src="./images/ou_sym_kl_0_9.png" alt="drawing" width="400"/>
+<p align="center"><img src="./images/ou_sym_kl_0_9.png" alt="drawing" width="450"/></p>
 
 ### Unnormalized Posterior Sampling
 
@@ -105,5 +108,5 @@ The available methods are: `ICNN_jko`, `dual_jko`, `bbf_100`, `bbf_1000`, `bbf_1
 
 The obtained discrepancy between fitted methods and ground truth method (Chang&Cooper numerical integration) presented below:
 
-<img src="./images/filtering_boxplot.png" alt="drawing" width="400"/>
+<p align="center"><img src="./images/filtering_boxplot.png" alt="drawing" width="450"/></p>
 
