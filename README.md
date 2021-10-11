@@ -2,6 +2,21 @@
 
 This repository contains **code** for reproducing the experiments as well as **results** of the experiments related to our article  *[Large-Scale Wasserstein Gradient Flows](https://arxiv.org/abs/2106.00736)* accepted for NeurIPS 2021. In our work we approximate gradient flows and, in particular, diffusion processes governed by Fokker-Planck equation using so-called JKO scheme modelled via Input Convex Neural Networks. We propose four experiments which demonstrate that our approach capable to work in different scenarious and machine learning applications.
 
+## Citation
+
+If you find this repository or the ideas presented in our paper useful, please consider citing our paper.
+
+```
+@misc{mokrov2021largescale,
+      title={Large-Scale Wasserstein Gradient Flows}, 
+      author={Petr Mokrov and Alexander Korotin and Lingxiao Li and Aude Genevay and Justin Solomon and Evgeny Burnaev},
+      year={2021},
+      eprint={2106.00736},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
+
 ## Prerequisites
 
 It is highly recommended to use GPU to launch our experiments. The list of required python libraries can be found in `./requirements.txt`. One can install the libraries via the following command:
@@ -91,19 +106,4 @@ The available methods are: `ICNN_jko`, `dual_jko`, `bbf_100`, `bbf_1000`, `bbf_1
 The obtained discrepancy between fitted methods and ground truth method (Chang&Cooper numerical integration) presented below:
 
 <img src="./images/filtering_boxplot.png" alt="drawing" width="400"/>
-
-## Citation
-
-If you find this repository or the ideas presented in our paper useful, please consider citing our paper.
-
-```
-@misc{mokrov2021largescale,
-      title={Large-Scale Wasserstein Gradient Flows}, 
-      author={Petr Mokrov and Alexander Korotin and Lingxiao Li and Aude Genevay and Justin Solomon and Evgeny Burnaev},
-      year={2021},
-      eprint={2106.00736},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
-```
 
