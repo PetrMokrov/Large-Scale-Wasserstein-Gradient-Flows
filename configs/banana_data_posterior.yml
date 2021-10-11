@@ -1,0 +1,16 @@
+ds_name: 'banana' # dataset name
+data_batch_size: 512
+clip_alpha: 8.0
+random_key: 'banana'
+batch_size: 1024
+layer_width: 128
+n_layers: 2
+pretrain_lr: 4.e-3
+n_jko_steps: 5 # number of jko steps to perform
+lr: 2.e-4
+dt: 0.1 # jko time interval
+n_step_iterations: 5000 # number of optimization iterations per jko step
+n_max_prop: 1024
+n_eval_samples: 4096
+experiment_name: 'banana_data_posterior'
+experiment_dir : './results/data_posterior'

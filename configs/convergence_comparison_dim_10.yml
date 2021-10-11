@@ -1,0 +1,55 @@
+dim: 10
+t_fin : 4.0 # diffusion duration
+init_variance : 16.0 # N(0, init_variance * I_{dim}) is initial distribution
+experiment_dir : './results/conv_comp_dim_10'
+exps_count: 5 # count of repeated experiments
+experiment_name: 'conv_comp_dim_10'
+random_key: 'jupiter'
+n_centers: 9
+target_span: 5.0
+target_std: 1.0
+stationary_type: 'cube'
+method:
+    'ICNN_jko':
+        layer_width: 512
+        n_layers: 2
+        n_step_iterations: 1000
+        n_max_prop: 512
+        dt: 0.1
+        pretrain_lr: 8.e-3
+        batch_size : 512
+        lr: 
+        - - 20
+          - 5.e-3
+        - - 20
+          - 2.e-3
+        dt : 0.1 # jko approximation interval
+        n_eval_samples : 8192 # samples to estimate KL
+    'EM_sim_1000':
+        dt: 1.e-3
+        n_particles: 1000
+        n_eval_samples: 1000
+    'EM_sim_10000':
+        dt: 1.e-3
+        n_particles: 10000
+        n_eval_samples: 10000
+    'EM_sim_50000':
+        dt: 1.e-3
+        n_particles: 50000
+        n_eval_samples: 10000
+    'EM_ProxRec_400':
+        dt: 1.e-3
+        n_particles: 400
+        n_eval_samples: 400
+        dtype: 'float64'
+        proxrec_reg: 0.05
+        proxrec_tol: 1.e-5
+        proxrec_maxiter: 300
+    'EM_ProxRec_1000':
+        dt: 1.e-3
+        n_particles: 1000
+        n_eval_samples: 1000
+        dtype: 'float64'
+        proxrec_reg: 0.05
+        proxrec_tol: 1.e-5
+        proxrec_maxiter: 300

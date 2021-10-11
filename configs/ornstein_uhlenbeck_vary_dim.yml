@@ -1,0 +1,75 @@
+dim_min: 1
+dim_max: 12
+t_fin : 1.0 # diffusion duration
+dt_estimation : 0.1 # fidelity estimation interval
+init_variance : 1.0 # N(0, init_variance * I_{dim}) is initial distribution
+experiment_dir : './results/ou_vary_dim'
+exps_count: 15 # count of repeated experiments
+experiment_name: 'ou_vary_dim_freq'
+random_key: 'abacaba'
+method:
+    'ICNN_jko':
+        batch_size : 1024
+        dt : 0.05 # jko approximation interval
+        n_step_iterations : 500 # n batches to learn each ICNN
+        n_eval_samples : 8192 # samples to estimate KL 
+        n_ICNN_layers : 2
+        ICNN_width : 64
+        ICNN_n_max_prop : 1024
+        learning_rate : 5.e-3
+        pretrain_learning_rate : 5.e-3
+    'EM_sim_1000':
+        dt: 1.e-3
+        n_particles: 1000
+        n_eval_samples: 1000
+    'EM_sim_10000':
+        dt: 1.e-3
+        n_particles: 10000
+        n_eval_samples: 10000
+    'EM_sim_50000':
+        dt: 1.e-3
+        n_particles: 50000
+        n_eval_samples: 10000
+    'dual_jko':
+        lbfgs_maxiter: 1000
+        lbfgs_gtol : 1.e-6
+        supp_variance: 8.0
+        n_basis: 500
+        kernel_type: 'poly'
+        dt: 0.1
+        n_eval_samples: 10000
+        dim_specs:
+            spec_0:
+                dim: 1
+                lbfgs_gtol: 1.e-8
+                supp_variance: 4.0
+                lbfgs_maxiter: 5000
+            spec_1:
+                dim: 2
+                lbfgs_gtol: 1.e-8
+                supp_variance: 2.0
+                lbfgs_maxiter: 5000
+    'EM_ProxRec_400':
+        dt: 1.e-3
+        n_particles: 400
+        n_eval_samples: 400
+        dtype: 'float64'
+        proxrec_reg: 0.05
+        proxrec_tol: 1.e-5
+        proxrec_maxiter: 300
+    'EM_ProxRec_1000':
+        dt: 1.e-3
+        n_particles: 1000
+        n_eval_samples: 1000
+        dtype: 'float64'
+        proxrec_reg: 0.05
+        proxrec_tol: 1.e-5
+        proxrec_maxiter: 300
+    'EM_ProxRec_10000':
+        dt: 1.e-3
+        n_particles: 10000
+        n_eval_samples: 10000
+        dtype: 'float64'
+        proxrec_reg: 0.05
+        proxrec_tol: 1.e-5
+        proxrec_maxiter: 300

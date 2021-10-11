@@ -1,0 +1,23 @@
+dim: 64
+random_key: 'venus'
+n_centers: 10
+target_span: 3.0
+target_std: 1.0
+init_variance: 16.0
+batch_size: 512
+pretrain_lr: 5.e-3
+stationary_type: 'cube'
+lr:
+- - 10
+  - 5.e-3
+- - 10
+  - 1.e-3
+- - 10
+  - 2.e-4
+experiment_name: 'conv_mix_gauss_dim_64'
+layer_width: 1024
+n_layers: 2
+n_step_iterations: 300
+n_max_prop: 256
+dt: 0.1
+experiment_dir : './results/convergence_dim_64'

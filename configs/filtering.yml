@@ -1,0 +1,38 @@
+t_fin: 5.0
+n_observations: 9
+init_std : 1.0
+noise_std: 1.0
+em_observations_dt : 1.e-3 # Euler-Maruyama observation simulation parameter
+cc_dt: 1.e-3 # Chang&Cooper time approximation interval
+cc_dx: 5.e-3 # Chang&Cooper space approximation interval
+experiment_dir : './results/filtering'
+exps_count: 15 # count of repeated experiments
+experiment_name: 'filtering'
+random_key: 'abacaba'
+method:
+    'ICNN_jko':
+        batch_size : 1024
+        dt : 0.1 # jko approximation interval
+        n_step_iterations : 700 # n batches to learn each ICNN
+        n_ICNN_layers : 2
+        ICNN_width : 256
+        ICNN_n_max_prop : 1024
+        learning_rate : 4.e-3
+        pretrain_learning_rate : 5.e-3
+        n_decorrelate: 2
+        n_warm_up: 1000
+        mcmc_method: 'zero'
+    'dual_jko':
+        dt: 0.1
+    'bbf_1000':
+        dt: 1.e-3
+        n_particles: 1000
+    'bbf_10000':
+        dt: 1.e-3
+        n_particles: 10000
+    'bbf_50000':
+        dt: 1.e-3
+        n_particles: 50000
+    'bbf_100':
+        dt: 1.e-3
+        n_particles: 100

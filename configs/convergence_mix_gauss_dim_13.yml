@@ -1,0 +1,23 @@
+dim: 13
+random_key: 'mercury'
+n_centers: 10
+target_span: 5.0
+target_std: 1.0
+init_variance: 16.0
+batch_size: 1024
+pretrain_lr: 4.e-3
+stationary_type: 'cube'
+lr:
+- - 10
+  - 5.e-3
+- - 20
+  - 2.e-3
+- - 20
+  - 5.e-4
+experiment_name: 'conv_mix_gauss_dim_13'
+layer_width: 512
+n_layers: 2
+n_step_iterations: 1000
+n_max_prop: 1024
+dt: 0.1
+experiment_dir : './results/convergence_dim_13'

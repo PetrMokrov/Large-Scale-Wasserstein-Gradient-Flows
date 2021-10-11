@@ -1,0 +1,15 @@
+torch>=1.5.1
+PyYAML>=5.4.1
+scipy>=1.5.0
+seaborn==0.11.1
+matplotlib>=3.2.2
+pandas>=1.0.5
+scikit-learn>=0.23.1
+multipledispatch==0.6.0
+scipy>=1.5.0
+tqdm>=4.46.1
+ipython>=7.15.0
+numba>=0.49.1
+sdepy==1.1.2
+sdeint==0.2.1
+dill==0.3.3
