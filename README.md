@@ -1,6 +1,6 @@
 # Large-Scale Wasserstein Gradient Flows
 
-This repository contains **code** for reproducing the experiments as well as **results** of the experiments related to our article  *[Large-Scale Wasserstein Gradient Flows](https://openreview.net/forum?id=Zbc-ue9p_rE)* accepted for NeurIPS 2021. In our work we approximate gradient flows and, in particular, diffusion processes governed by Fokker-Planck equation using so-called JKO scheme modelled via Input Convex Neural Networks. We propose four experiments which demonstrate that our approach capable to work in different scenarious and machine learning applications.
+This repository contains **code** for reproducing the experiments as well as **results** of the experiments related to our article  *[Large-Scale Wasserstein Gradient Flows](https://arxiv.org/abs/2106.00736)* accepted for NeurIPS 2021. In our work we approximate gradient flows and, in particular, diffusion processes governed by Fokker-Planck equation using so-called JKO scheme modelled via Input Convex Neural Networks. We propose four experiments which demonstrate that our approach capable to work in different scenarious and machine learning applications.
 
 ## Prerequisites
 
