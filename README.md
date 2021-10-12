@@ -2,7 +2,7 @@
 
 This repository contains **code** and **results** of the experiments of NeurIPS 2021 paper *[Large-Scale Wasserstein Gradient Flows](https://arxiv.org/abs/2106.00736)* by [Petr Mokrov](https://www.semanticscholar.org/author/Petr-Mokrov/2106626550), [Alexander Korotin](https://scholar.google.ru/citations?user=1rIIvjAAAAAJ&hl=en), [Lingxiao Li](https://scholar.google.com/citations?user=rxQDLWcAAAAJ&hl=en), [Aude Genevay](https://scholar.google.com/citations?user=SryRaIMAAAAJ), [Justin Solomon](https://scholar.google.com/citations?user=pImSVwoAAAAJ) and [Evgeny Burnaev](https://scholar.google.ru/citations?user=pCRdcOwAAAAJ&hl=ru). We approximate gradient flows and, in particular, diffusion processes governed by Fokker-Planck equation using JKO scheme modelled via Input Convex Neural Networks. We conduct experiments to demonstrate that our approach works in different scenarios and machine learning applications.
 
-<p align="center"><img src="images/motivation.png" width="450" /></p>
+<p align="center"><img src="images/motivation.png" width="500" /></p>
 
 ## Citation
 
@@ -112,3 +112,12 @@ The obtained discrepancy between fitted methods and ground truth method (Chang&C
 
 <p align="center"><img src="./images/filtering_boxplot.png" alt="drawing" width="450"/></p>
 
+## Credits
+
+* [SVGD repo](https://github.com/DartML/Stein-Variational-Gradient-Descent) with SVGD implementation and corresponding benchmark datasets.
+
+* [W2GN repo](https://github.com/iamalexkorotin/Wasserstein2GenerativeNetworks) with ICNN implementation
+
+* Authors of [Approximate Inference with Wasserstein Gradient Flows](http://proceedings.mlr.press/v108/frogner20a/frogner20a.pdf) kindly provided us with their source code
+
+* [pychangcooper repo](https://github.com/grburgess/pychangcooper) with Chang&Cooper numerical solver for Fokker-Planck equation
