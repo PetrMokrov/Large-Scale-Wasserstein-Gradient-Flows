@@ -1,21 +1,21 @@
 # Large-Scale Wasserstein Gradient Flows
 
-This repository contains **code** and **results** of the experiments of NeurIPS 2021 paper *[Large-Scale Wasserstein Gradient Flows](https://arxiv.org/abs/2106.00736)* by [Petr Mokrov](https://www.semanticscholar.org/author/Petr-Mokrov/2106626550), [Alexander Korotin](https://scholar.google.ru/citations?user=1rIIvjAAAAAJ&hl=en), [Lingxiao Li](https://scholar.google.com/citations?user=rxQDLWcAAAAJ&hl=en), [Aude Genevay](https://scholar.google.com/citations?user=SryRaIMAAAAJ), [Justin Solomon](https://scholar.google.com/citations?user=pImSVwoAAAAJ) and [Evgeny Burnaev](https://scholar.google.ru/citations?user=pCRdcOwAAAAJ&hl=ru). We approximate gradient flows and, in particular, diffusion processes governed by Fokker-Planck equation using JKO scheme modelled via Input Convex Neural Networks. We conduct experiments to demonstrate that our approach works in different scenarios and machine learning applications.
+This repository contains **code** and **results** of the experiments of NeurIPS 2021 paper *[Large-Scale Wasserstein Gradient Flows](https://openreview.net/forum?id=nlLjIuHsMHp)* by [Petr Mokrov](https://www.semanticscholar.org/author/Petr-Mokrov/2106626550), [Alexander Korotin](https://scholar.google.ru/citations?user=1rIIvjAAAAAJ&hl=en), [Lingxiao Li](https://scholar.google.com/citations?user=rxQDLWcAAAAJ&hl=en), [Aude Genevay](https://scholar.google.com/citations?user=SryRaIMAAAAJ), [Justin Solomon](https://scholar.google.com/citations?user=pImSVwoAAAAJ) and [Evgeny Burnaev](https://scholar.google.ru/citations?user=pCRdcOwAAAAJ&hl=ru). We approximate gradient flows and, in particular, diffusion processes governed by Fokker-Planck equation using JKO scheme modelled via Input Convex Neural Networks. We conduct experiments to demonstrate that our approach works in different scenarios and machine learning applications.
 
-<p align="center"><img src="images/motivation.png" width="500" /></p>
+<p align="center"><img src="images/motivation.png" width="600" /></p>
 
 ## Citation
 
 If you find this repository or the ideas presented in our paper useful, please consider citing our paper.
 
 ```
-@misc{mokrov2021largescale,
-      title={Large-Scale Wasserstein Gradient Flows}, 
+@inproceedings{
+      mokrov2021largescale,
+      title={Large-Scale Wasserstein Gradient Flows},
       author={Petr Mokrov and Alexander Korotin and Lingxiao Li and Aude Genevay and Justin Solomon and Evgeny Burnaev},
+      booktitle={Thirty-Fifth Conference on Neural Information Processing Systems},
       year={2021},
-      eprint={2106.00736},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+      url={https://openreview.net/forum?id=nlLjIuHsMHp}
 }
 ```
 
