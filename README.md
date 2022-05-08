@@ -9,13 +9,12 @@ This repository contains **code** and **results** of the experiments of NeurIPS 
 If you find this repository or the ideas presented in our paper useful, please consider citing our paper.
 
 ```
-@inproceedings{
-      mokrov2021largescale,
-      title={Large-Scale Wasserstein Gradient Flows},
-      author={Petr Mokrov and Alexander Korotin and Lingxiao Li and Aude Genevay and Justin Solomon and Evgeny Burnaev},
-      booktitle={Thirty-Fifth Conference on Neural Information Processing Systems},
-      year={2021},
-      url={https://openreview.net/forum?id=nlLjIuHsMHp}
+@article{mokrov2021large,
+  title={Large-scale wasserstein gradient flows},
+  author={Mokrov, Petr and Korotin, Alexander and Li, Lingxiao and Genevay, Aude and Solomon, Justin M and Burnaev, Evgeny},
+  journal={Advances in Neural Information Processing Systems},
+  volume={34},
+  year={2021}
 }
 ```
 
